@@ -7,11 +7,10 @@ Example= User's Email = users_email@gmail.com  => users_email
 
 const getEmail = (email) => {
   let string1 = email;
-  const isInclude = string1.includes("@");
+  const isInclude = string1.search("@");
   if (isInclude) {
-    isPosition = string1.indexOf("@");
     let newInput = "";
-    for (let i = 0; i < isPosition; i++) {
+    for (let i = 0; i < isInclude; i++) {
       newInput += string1[i];
     }
     console.log(newInput);
